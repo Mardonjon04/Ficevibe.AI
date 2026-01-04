@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#090712" />
+    <meta name="color-scheme" content="dark light" />
+
+    <title>Face Vibes AI — Mashhurga o‘xshashlikni toping</title>
+    <meta name="description"
+        content="Rasm yuklang va Face Vibes AI sizni qaysi mashhur shaxsga o‘xshashligingizni ko‘rsatadi. Natijani bir bosishda ulashing." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Face Vibes AI — You look like…" />
+    <meta property="og:description"
+        content="Rasm yuklang, AI sizni qaysi mashhurga o‘xshashligingizni ko‘rsatadi. Natijani ulashing." />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='30%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23ff4fd8'/%3E%3Cstop offset='55%25' stop-color='%236b5cff'/%3E%3Cstop offset='100%25' stop-color='%2309f'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23090712'/%3E%3Cpath d='M32 14c10 0 18 8 18 18S42 50 32 50 14 42 14 32s8-18 18-18Zm0 7a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm0 18c-7.7 0-14 4.4-14 8.5 0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2 0-4.1-6.3-8.5-14-8.5Z' fill='url(%23g)'/%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='44' fill='%23090712'/%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='30%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23ff4fd8'/%3E%3Cstop offset='55%25' stop-color='%236b5cff'/%3E%3Cstop offset='100%25' stop-color='%2309f'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cpath d='M90 38c28 0 50 22 50 50s-22 50-50 50-50-22-50-50 22-50 50-50Zm0 18a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm0 52c-21.3 0-38 12-38 23 0 3 2.4 5 5.4 5h65.2c3 0 5.4-2 5.4-5 0-11-16.7-23-38-23Z' fill='url(%23g)'/%3E%3C/svg%3E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <a class="skip" href="#main">Kontentga o‘tish</a>
+
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <div class="brand" aria-label="Face Vibes AI">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__text">Face Vibes AI</span>
+            </div>
+
+            <div class="topbar__actions">
+                <button class="btn btn--ghost" id="installBtn" type="button" hidden>Install</button>
+                <button class="btn btn--ghost" id="themeBtn" type="button" aria-pressed="false">Dark</button>
+            </div>
+        </div>
+
+        <div class="ad-wrap">
+            <div class="container">
+                <div class="ad-slot" aria-label="Advertisement: Header banner">
+                    <div class="ad-slot__label">Advertisement</div>
+                    <div class="ad-slot__box" id="adHeader">
+                        <div class="ad-slot__hint">Header banner (970×90 / 728×90 / 320×50)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="container main">
+        <section class="hero" aria-label="Upload and analyze">
+            <div class="hero__copy">
+                <h1 class="h1">
+                    Rasm yuklang.
+                    <span class="grad">Qaysi mashhurga o‘xshashingizni</span> bilib oling.
+                </h1>
+                <p class="lead">
+                    Hech qanday ro‘yxatdan o‘tish yo‘q. Surat qurilmangizda qoladi. Natijani bir bosishda ulashing.
+                </p>
+
+                <div class="cta">
+                    <input id="fileInput" class="sr-only" type="file"
+                        accept="image/jpeg,image/png,image/webp,image/heic,image/heif" />
+                    <button id="uploadBtn" class="btn btn--primary" type="button">Upload Photo</button>
+                    <button id="demoBtn" class="btn btn--ghost" type="button">Demo natija</button>
+                </div>
+
+                <div class="micro" id="privacyLine">
+                    Maksimum: 5MB. JPG/PNG/WebP. Serverga yuklanmaydi.
+                </div>
+            </div>
+
+            <div class="hero__card" aria-label="Preview and status">
+                <div class="preview" id="preview">
+                    <div class="preview__empty">
+                        <div class="preview__ring" aria-hidden="true"></div>
+                        <div class="preview__title">Surat preview</div>
+                        <div class="preview__sub">Yuz aniqlash simulyatsiyasi + natija</div>
+                    </div>
+                    <img id="previewImg" alt="Yuklangan rasm preview" hidden />
+                </div>
+
+                <div class="status" role="status" aria-live="polite">
+                    <div class="status__row">
+                        <span class="dot dot--idle" id="statusDot" aria-hidden="true"></span>
+                        <span id="statusText">Tayyor</span>
+                    </div>
+                    <div class="steps" id="steps" hidden>
+                        <div class="steps__item" id="step1">Yuz aniqlanmoqda…</div>
+                        <div class="steps__item" id="step2">Xususiyatlar solishtirilmoqda…</div>
+                        <div class="steps__item" id="step3">Mashhurlar bazasi tekshirilmoqda…</div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <button id="analyzeBtn" class="btn btn--primary" type="button" disabled>Analyze</button>
+                    <button id="resetBtn" class="btn btn--ghost" type="button" disabled>Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results" id="results" hidden aria-label="Results">
+            <div class="results__head">
+                <div>
+                    <h2 class="h2" id="resultTitle">You look like…</h2>
+                    <div class="sub" id="resultSub"></div>
+                </div>
+                <div class="results__pill" id="resultBadge" aria-label="Confidence badge">High vibe</div>
+            </div>
+
+            <div class="cards" id="resultCards"></div>
+
+            <div class="share">
+                <div class="share__title">Share</div>
+                <div class="share__row">
+                    <a class="share-btn" id="shareTelegram" rel="noopener" target="_blank">Telegram</a>
+                    <a class="share-btn" id="shareWhatsapp" rel="noopener" target="_blank">WhatsApp</a>
+                    <button class="share-btn" id="shareInstagram" type="button">Instagram</button>
+                    <button class="share-btn share-btn--ghost" id="copyLink" type="button">Copy link</button>
+                </div>
+                <div class="share__note" id="shareNote">
+                    Instagram uchun link nusxalanadi — story/postga qo‘ying.
+                </div>
+            </div>
+
+            <div class="ad-wrap ad-wrap--after">
+                <div class="ad-slot" aria-label="Advertisement: After-result banner">
+                    <div class="ad-slot__label">Advertisement</div>
+                    <div class="ad-slot__box" id="adAfter">
+                        <div class="ad-slot__hint">After-result banner (responsive)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results__cta">
+                <button class="btn btn--primary" id="tryAgainBtn" type="button">Yana sinab ko‘rish</button>
+            </div>
+        </section>
+
+        <section class="offline" id="offline" hidden aria-label="Offline">
+            <div class="offline__card">
+                <div class="offline__title">Offline rejim</div>
+                <div class="offline__text">
+                    Sayt ochildi, lekin internet yo‘q. Oldin yuklangan resurslar bilan ishlaydi.
+                </div>
+                <button class="btn btn--primary" id="offlineRetry" type="button">Qayta urinish</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__left">
+                <div class="footer__brand">Face Vibes AI</div>
+                <div class="footer__small">© <span id="year"></span> Viral vibes. Static + PWA.</div>
+            </div>
+            <div class="footer__right">
+                <a class="link" href="#" id="openPrivacy">Privacy</a>
+                <a class="link" href="#" id="openPolicy">Ads Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="adModal" hidden aria-hidden="true">
+        <div class="modal__backdrop" data-close="true"></div>
+        <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Advertisement">
+            <div class="modal__head">
+                <div class="modal__title">Advertisement</div>
+                <button class="icon-btn" type="button" id="closeAdModal" aria-label="Close" data-close="true">✕</button>
+            </div>
+            <div class="modal__body">
+                <div class="ad-slot ad-slot--modal" aria-label="Advertisement: Interstitial before result">
+                    <div class="ad-slot__box" id="adInterstitial">
+                        <div class="ad-slot__hint">Interstitial (Auto ads / vignette) joyi</div>
+                    </div>
+                </div>
+                <div class="modal__actions">
+                    <button class="btn btn--primary" type="button" id="continueToResults">Continue</button>
+                </div>
+                <div class="modal__note">
+                    Reklama kontentni majburan yopib qo‘ymasligi va foydalanuvchi harakati bilan ko‘rsatilishi tavsiya
+                    etiladi.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="infoModal" hidden aria-hidden="true">
+        <div class="modal__backdrop" data-close="true"></div>
+        <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Info">
+            <div class="modal__head">
+                <div class="modal__title" id="infoTitle">Info</div>
+                <button class="icon-btn" type="button" aria-label="Close" data-close="true">✕</button>
+            </div>
+            <div class="modal__body">
+                <div class="modal__text" id="infoText"></div>
+                <div class="modal__actions">
+                    <button class="btn btn--primary" type="button" data-close="true">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
